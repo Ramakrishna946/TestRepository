@@ -61,7 +61,7 @@ public class Addtocart {
 		//driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-		FileUtils.copyFile(src, new File("C:\\Users\\chkri\\eclipse-workspace\\SeleniumPractice\\Screenshots\\Screenshot_" + timestamp + ".png"));
+		FileUtils.copyFile(src, new File("C:\\Users\\chkri\\git\\repository2\\Practice\\SeleniumPractice\\Screenshots\\Screenshot_" + timestamp + ".png"));
 		
 	}
 	
