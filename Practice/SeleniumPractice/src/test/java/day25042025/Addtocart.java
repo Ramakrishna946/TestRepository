@@ -31,7 +31,7 @@ public class Addtocart {
 		driver.manage().deleteAllCookies();
 		
 		
-		String[] vegetables= {"Brocolli","Beetroot","Carrot","Brinjal","Mushroom","Onion","Orange","Potato","Pears"};
+		String[] vegetables= {"Brocolli","Beetroot","Carrot","Brinjal","Mushroom","Onion","Orange","Potato","Pears","Raspberry","Cashews"};
 		int j=0;
 		List<WebElement>products=driver.findElements(By.cssSelector("h4.product-name"));
 		for(int i=0; i<products.size(); i++) {
