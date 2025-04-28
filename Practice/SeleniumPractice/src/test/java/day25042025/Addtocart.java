@@ -45,7 +45,7 @@ public class Addtocart {
 				
 				System.out.println("the required actual item : " +actitem);
 				j++;
-				driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
+				driver.findElements(By.xpath("//div[@class='product-action']")).get(i).click();
 				getScreenshot(driver);
 				if(j==vegetables.length) {
 					break;
