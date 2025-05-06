@@ -18,7 +18,7 @@ public class HandlingLinks {
 		WebDriver driver= new ChromeDriver();
 		
 		driver.manage().window().maximize();
-		driver.get("https://www.tpointtech.com/java-tutorial");
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");//https://www.tpointtech.com/java-tutorial
 		Thread.sleep(2000);
 		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 		System.out.println("The total Links in the Page is : " + allLinks.size());
