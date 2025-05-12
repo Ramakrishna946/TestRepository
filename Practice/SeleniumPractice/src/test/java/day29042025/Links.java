@@ -49,6 +49,7 @@ public class Links {
         for (String handle : windowList) {
             driver.switchTo().window(handle);
             System.out.println("Page title: " + driver.getTitle());
+            driver.close();
         }
 
         driver.quit();
