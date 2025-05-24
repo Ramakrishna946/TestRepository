@@ -4,7 +4,7 @@ public class DuplicateChars {
 
 	
 	    public static void main(String[] args) {
-	        String input = "AABBBCCCCaaaa";//ramakrishna chintha thangella marripudi
+	        String input = "ramakrishna chintha thangella marripudi";//AABBBCCCCaaaa
 	        String aftremovespaces=input.replace(" ", "");
 	        
 	        System.out.println("the string after remove the spaces :" +aftremovespaces);
