@@ -9,10 +9,11 @@ public class VowelConsonantCount {
 
         for (char ch : str.toCharArray()) {
             if (ch >= 'A' && ch <= 'Z') {
-                if ("AEIOU".indexOf(ch) != -1)
+                if ("AEIOU".indexOf(ch) != -1) {
                     vowels++;
-                else
+                }else {
                     consonants++;
+                }
             }
         }
 

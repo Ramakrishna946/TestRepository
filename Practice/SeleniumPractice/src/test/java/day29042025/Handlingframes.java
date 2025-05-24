@@ -21,12 +21,15 @@ public class Handlingframes {
 		driver.manage().deleteAllCookies();
 		List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
 		System.out.println("Total iframes on the page: " + iframes.size());
+		for(int i=0;i<iframes.size();i++){
+		    System.out.println(iframes.get(i));
+		} 
 		driver.switchTo().frame(0);
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		driver.findElement(By.cssSelector("a.toggle")).click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		driver.findElement(By.xpath("//ul/li/a[.='Actions']")).click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		driver.quit();
 	}
 

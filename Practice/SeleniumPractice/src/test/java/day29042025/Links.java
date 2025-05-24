@@ -22,6 +22,9 @@ public class Links {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().deleteAllCookies();
+        WebElement ele=driver.findElement(By.xpath("//button[normalize-space()='Home']"));
+        String colour=ele.getCssValue("color");
+        System.out.println("The Colour is :" +colour);
 
         // 1. Total links on the page
         System.out.println("Total links on the page: " + driver.findElements(By.tagName("a")).size());

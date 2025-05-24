@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -16,7 +17,9 @@ public class AutoSuggestiveDropdown {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("incognito");
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -32,8 +35,8 @@ public class AutoSuggestiveDropdown {
 		System.out.println(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
 		soft.assertTrue(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
 		driver.findElement(By.id("autosuggest")).sendKeys("br");
-		List<WebElement> options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
-		for (WebElement option : options) {
+		List<WebElement> options1 = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+		for (WebElement option : options1) {
 			if (option.getText().equalsIgnoreCase("Gibraltar")) {
 				option.click();
 				break;

@@ -4,11 +4,11 @@ public class DuplicateChars {
 
 	
 	    public static void main(String[] args) {
-	        String input = "ramakrishna chintha thangella marripudi";
+	        String input = "AABBBCCCCaaaa";//ramakrishna chintha thangella marripudi
 	        String aftremovespaces=input.replace(" ", "");
 	        
 	        System.out.println("the string after remove the spaces :" +aftremovespaces);
-	        char[] chars = aftremovespaces.toCharArray();
+	        char[] chars = input.toCharArray();
 	        boolean[] visited = new boolean[chars.length];
 
 	        System.out.println("Duplicate characters in the string:");
@@ -24,7 +24,7 @@ public class DuplicateChars {
 	                }
 	            }
 
-	            if (count >  1) {
+	            if (count >=  1) {
 	                System.out.println(chars[i] + " - " + count + " times");
 	            }
 	        }
