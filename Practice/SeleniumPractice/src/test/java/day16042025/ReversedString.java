@@ -3,7 +3,7 @@ package day16042025;
 public class ReversedString {
 
 	public static void main(String[] args) {
-		String S1="Ramakrishna Chintha";
+		String S1="RamakrishnaChintha";
 		String reverse="";
 		String reversed = new StringBuilder(S1).reverse().toString();
 		System.out.println("the reverse of the string given is :" +reversed);

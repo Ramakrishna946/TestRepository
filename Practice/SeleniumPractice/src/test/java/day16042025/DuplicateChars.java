@@ -1,35 +1,27 @@
 package day16042025;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class DuplicateChars {
 
-	
-	    public static void main(String[] args) {
-	        String input = "ramakrishna chintha thangella marripudi";//AABBBCCCCaaaa
-	        String aftremovespaces=input.replace(" ", "");
-	        
-	        System.out.println("the string after remove the spaces :" +aftremovespaces);
-	        char[] chars = input.toCharArray();
-	        boolean[] visited = new boolean[chars.length];
+    public static void main(String[] args) {
+        String input = "ramakrishna chintha thangella marripudi";
+        String afterRemoveSpaces = input.replace(" ", "").toUpperCase(); // Remove spaces and convert to uppercase
 
-	        System.out.println("Duplicate characters in the string:");
+        System.out.println("The string after removing spaces: " + afterRemoveSpaces);
 
-	        for (int i = 0; i < chars.length; i++) {
-	            if (visited[i]) continue;
+        Map<Character, Integer> map = new HashMap<>();
 
-	            int count = 1;
-	            for (int j = i + 1; j < chars.length; j++) {
-	                if (chars[i] == chars[j]) {
-	                    count++;
-	                    visited[j] = true;
-	                }
-	            }
+        for (char ch : afterRemoveSpaces.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
 
-	            if (count >=  1) {
-	                System.out.println(chars[i] + " - " + count + " times");
-	            }
-	        }
-	    }
-	}
-
-	
-
+        System.out.println("Duplicate characters:");
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " -> " + entry.getValue());
+            }
+        }
+    }
+}
