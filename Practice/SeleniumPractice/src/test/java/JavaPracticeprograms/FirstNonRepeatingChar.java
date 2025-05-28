@@ -1,6 +1,7 @@
 package JavaPracticeprograms;
 
 public class FirstNonRepeatingChar {
+	///////////////
     public static void main(String[] args) {
         String input = "dfrrddgrfswfwgwggerwwfwgwesh";
         int[] freq = new int[256]; // ASCII characters

@@ -1,9 +1,12 @@
 package JavaPracticeprograms;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamsPractice1 {
 
+	
 	public static void main(String[] args) {
 	long num=	Stream.of("Apple", "Banana", "Orange").count();
 	System.out.println(num);
@@ -14,6 +17,9 @@ public class StreamsPractice1 {
 	fruits1.sorted().forEach(s->System.out.println(s+ " "));
 	Stream<String> fruits2=Stream.of("Apple", "Banana", "Orange","Apple",   "Cat",    "Ball","Cartoon", "Banana", "Avocado");
 	fruits2.distinct().map(s->s.toUpperCase()).forEach(s->System.out.println(s+ " "));
+	Stream<String> fruits3=Stream.of("Apple", "Banana", "Orange","Apple",   "Cat",    "Ball","Cartoon", "Banana", "Avocado");
+	List<String> fruitslist=fruits3.collect(Collectors.toList());
+	System.out.println(fruitslist);
 	}
 
 }

@@ -3,6 +3,8 @@ package day17042025;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +16,7 @@ public class LoginTest {
     @BeforeClass
     public void setUp() {
         System.out.println("🔧 BeforeClass - Opening browser for LoginTest");
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
         driver.get("https://example.com/login");
         driver.findElement(RelativeLocator.with(By.partialLinkText("More"))).click();
     }

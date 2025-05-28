@@ -2,6 +2,7 @@ package JavaPracticeprograms;
 
 public class Count {
 
+	
 	public static void main(String[] args) {
 		long num=173266762;
 		int count=0;

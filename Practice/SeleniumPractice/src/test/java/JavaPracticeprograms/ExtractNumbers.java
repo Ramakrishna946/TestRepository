@@ -1,6 +1,7 @@
 package JavaPracticeprograms;
 
 	public class ExtractNumbers {
+		
 	    public static void main(String[] args) {
 	        String input = "sfsg5454gre353ft4rfe535grt53tget35";
 //	        StringBuilder numbers = new StringBuilder();
